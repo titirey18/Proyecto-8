@@ -21,7 +21,7 @@ app.use(cors())
 connectDB()
 app.use('/api/v1/users', userRoutes)
 app.use('/api/v1/productos', productoRouter)
-app.use('/api/v1/lista', listasRouter)
+app.use('/api/v1/listas', listasRouter)
 
 app.use('*', (req, res, next) => {
   return res.status(404).json('return not found')

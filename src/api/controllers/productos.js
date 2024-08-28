@@ -49,10 +49,9 @@ const postproductos = async (req, res, next) => {
   try {
     const newproducto = new Producto(req.body)
 
-    /*     if (req.file) {
-      console.log(req.file)
-      newproducto.image = req.files.path
-    } */
+    if (req.file) {
+      newproducto.image = req.file.path
+    }
 
     if (req.user.rol === 'admin') {
       newproducto.verified = true

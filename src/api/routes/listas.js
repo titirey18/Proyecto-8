@@ -1,5 +1,5 @@
 const { Administrador } = require('../../middlewares/auth')
-const upload = require('../../middlewares/files')
+const upload = require('../../middlewares/file')
 const {
   getlista,
   getlistasById,

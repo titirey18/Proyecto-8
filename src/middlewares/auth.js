@@ -21,6 +21,7 @@ const Administrador = async (req, res, next) => {
   try {
     const token = req.headers.authorization
     const replacetoken = token.replace('Bearer ', '')
+
     const { id } = verifyJWT(replacetoken)
 
     const user = await User.findById(id)
