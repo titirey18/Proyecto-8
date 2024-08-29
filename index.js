@@ -27,6 +27,6 @@ app.use('*', (req, res, next) => {
   return res.status(404).json('return not found')
 })
 
-app.listen(3000, () => {
-  console.log('servidor levantado en http://localhost:3000')
+app.listen(8000, () => {
+  console.log('servidor levantado en http://localhost:8000')
 })
