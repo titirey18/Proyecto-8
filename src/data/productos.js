@@ -2,14 +2,15 @@ const productos = [
   {
     name: 'Tomate',
     image:
-      'https://phantom-elmundo.unidadeditorial.es/bee82de9d187c901dddc81abe48f78cb/resize/1200/f/webp/assets/multimedia/imagenes/2024/03/07/17098165627875.jpg',
+      'https://res.cloudinary.com/ddzr96gt7/image/upload/v1725265571/product/tomate_cmt88q.webp',
     Price: 1,
     category: 'verdura',
     verified: true
   },
   {
     name: 'Carne de Res',
-    image: 'https://www.gob.mx/cms/uploads/article/main_image/37481/carne1.jpg',
+    image:
+      'https://res.cloudinary.com/ddzr96gt7/image/upload/v1725265677/product/carne1_eceu1t.jpg',
     Price: 8,
     category: 'carne',
     verified: true
@@ -17,7 +18,7 @@ const productos = [
   {
     name: 'Filete de Salmón',
     image:
-      'https://www.centraladomicilio.com/cdn/shop/products/salmon.jpg?v=1584466069',
+      'hhttps://res.cloudinary.com/ddzr96gt7/image/upload/v1725265694/product/salmon_bciphe.webp',
     Price: 12,
     category: 'pezcado',
     verified: true
@@ -25,7 +26,7 @@ const productos = [
   {
     name: 'Papas Fritas',
     image:
-      'https://www.surtimovil.com/wp-content/uploads/2020/06/snack-papas-fritas-lays-naturales-174g.png',
+      'https://res.cloudinary.com/ddzr96gt7/image/upload/v1725265669/product/snack-papas-fritas-lays-naturales-174g_aufdfg.png',
     Price: 2,
     category: 'snakcs',
     verified: true
@@ -33,7 +34,7 @@ const productos = [
   {
     name: 'Lechuga',
     image:
-      'https://www.semana.com/resizer/v2/3REV53527RABTL2YCEI3KJZWAM.jpg?auth=8fd4628213a5e3d840d22bf7695b23bbd13bef1d43655fc2aacf816785f089ca&smart=true&quality=75&width=1280&height=720',
+      'https://res.cloudinary.com/ddzr96gt7/image/upload/v1725265687/product/lechuga_dsqwin.avif',
     Price: 1,
     category: 'verdura',
     verified: true
@@ -41,7 +42,7 @@ const productos = [
   {
     name: 'Pollo',
     image:
-      'https://www.aldelis.com/wp-content/uploads/2020/07/Marinados-de-pollo-Aldelis.jpg',
+      'https://res.cloudinary.com/ddzr96gt7/image/upload/v1725265704/product/Marinados-de-pollo-Aldelis_g8ncig.jpg',
     Price: 7,
     category: 'carne',
     verified: true
