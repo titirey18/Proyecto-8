@@ -1,5 +1,5 @@
 const { Administrador } = require('../../middlewares/auth')
-const upload = require('../../middlewares/file')
+const { uploadList } = require('../../middlewares/file')
 const {
   getlista,
   getlistasById,
@@ -12,8 +12,8 @@ const listasRouter = require('express').Router()
 
 listasRouter.get('/:id', getlistasById)
 listasRouter.get('/', getlista)
-listasRouter.post('/', [Administrador], upload.single('image'), postlista)
-listasRouter.put('/:id', [Administrador], upload.single('image'), putlista)
+listasRouter.post('/', [Administrador], uploadList.single('image'), postlista)
+listasRouter.put('/:id', [Administrador], uploadList.single('image'), putlista)
 listasRouter.delete('/:id', [Administrador], deletelista)
 
 module.exports = listasRouter

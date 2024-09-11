@@ -1,5 +1,6 @@
 const { Auth, Administrador } = require('../../middlewares/auth')
-const upload = require('../../middlewares/file')
+const { uploadProduct } = require('../../middlewares/file')
+
 const {
   getproductos,
   getproductosById,
@@ -16,8 +17,13 @@ productoRouter.get('/price/:price', getProductosByPrice)
 productoRouter.get('/category/:category', getproductosBycategory)
 productoRouter.get('/:id', getproductosById)
 productoRouter.get('/', getproductos)
-productoRouter.post('/', [Auth], upload.single('image'), postproductos)
-productoRouter.put('/:id', [Administrador], putproducto)
+productoRouter.post('/', [Auth], uploadProduct.single('image'), postproductos)
+productoRouter.put(
+  '/:id',
+  [Administrador],
+  uploadProduct.single('image'),
+  putproducto
+)
 productoRouter.delete('/:id', [Administrador], deleteproductos)
 
 module.exports = productoRouter

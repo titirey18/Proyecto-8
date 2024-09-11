@@ -1,14 +1,10 @@
 const multer = require('multer')
-const cloudinary = require('cloudinary').v2
-const { CloudinaryStorage } = require('multer-storage-cloudinary')
+const { createCloudinaryStorage } = require('../utils/cloudinaryconfig')
 
-const storage = new CloudinaryStorage({
-  cloudinary: cloudinary,
-  params: {
-    folder: 'Products',
-    allwebformats: ['jpg', 'png', 'jpeg', 'gif']
-  }
-})
+const productStorage = createCloudinaryStorage('Products')
+const uploadProduct = multer({ storage: productStorage })
 
-const upload = multer({ storage })
-module.exports = upload
+const listStorage = createCloudinaryStorage('Lists')
+const uploadList = multer({ storage: listStorage })
+
+module.exports = { uploadProduct, uploadList }
